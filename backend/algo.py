@@ -429,4 +429,4 @@ def provideJobRecommendation(userKnowledge):
         if count == len(job_skills):
             suggest.append(name)
 
-    return suggest
+    return suggest if suggest else ["No jobs available based on your skill sets"]

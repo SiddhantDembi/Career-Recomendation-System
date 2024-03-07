@@ -75,7 +75,7 @@ export default function Difficulties() {
         <button className="btn btn-primary" id="b1" type="submit">
           Submit
         </button>
-        {error && <p className="error-message">{error}</p>}
+        {error && <p style={{marginTop: "20px"}} className="error-message">{error}</p>}
       </form>
     </>
   );

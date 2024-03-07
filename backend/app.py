@@ -36,5 +36,6 @@ def dif():
     
     return jsonify({"arr": job_recommendations})
 
+
 if __name__ == "__main__":
     app.run(debug=True)
