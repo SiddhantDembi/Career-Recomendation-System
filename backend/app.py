@@ -13,8 +13,6 @@ llm = Cohere(cohere_api_key=os.environ["COHERE_API_KEY"], temperature=0.5)
 CORS(app)
 db = PyMongo(app).db
 
-
-
 @app.route("/ask", methods=["POST"])
 def ask_question():
     data = request.get_json()
@@ -61,7 +59,6 @@ def dif():
     for item in l:
         print(item)
     return jsonify({"arr": l})
-
 
 if __name__ == "__main__":
     app.run(debug=True)
