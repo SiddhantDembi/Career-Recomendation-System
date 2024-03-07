@@ -4,6 +4,6 @@ Flask-JWT-Extended
 Flask-PyMongo
 Flask-Bcrypt
 python-dotenv
-langchain
+langchain-community
 cohere
 black
