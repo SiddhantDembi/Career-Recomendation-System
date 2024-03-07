@@ -180,7 +180,7 @@ def provideJobRecommendation(userKnowledge):
             "ans9": 4,
             "ans10": 2,
         },
-        "supply chain ans7": {
+        "supply chain": {
             "ans1": 1,
             "ans2": 3,
             "ans3": 1,
@@ -228,7 +228,7 @@ def provideJobRecommendation(userKnowledge):
             "ans9": 3,
             "ans10": 2,
         },
-        "ans5": {
+        "mentor": {
             "ans1": 1,
             "ans2": 3,
             "ans3": 2,
@@ -276,7 +276,7 @@ def provideJobRecommendation(userKnowledge):
             "ans9": 1,
             "ans10": 1,
         },
-        "news ans9": {
+        "news": {
             "ans1": 1,
             "ans2": 2,
             "ans3": 3,
@@ -389,10 +389,10 @@ def provideJobRecommendation(userKnowledge):
         },
         {
             "name": "Supply Chain Manager",
-            "skills": ["supply chain ans7", "procurement", "logistics"],
+            "skills": ["supply chain", "procurement", "logistics"],
         },
-        {"name": "Teacher", "skills": ["teaching", "ans5", "lesson planning"]},
-        {"name": "Journalist", "skills": ["journalism", "interviewing", "news ans9"]},
+        {"name": "Teacher", "skills": ["teaching", "mentor", "lesson planning"]},
+        {"name": "Journalist", "skills": ["journalism", "interviewing", "news"]},
         {
             "name": "Software Developer",
             "skills": ["programming", "problem-solving", "software development"],
