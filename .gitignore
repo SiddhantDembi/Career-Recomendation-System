@@ -1,0 +1,4 @@
+/frontend/my-react-app/node_modules
+/frontend/my-react-app/package-lock.json
+/backend/.env
+/backend/myenv
