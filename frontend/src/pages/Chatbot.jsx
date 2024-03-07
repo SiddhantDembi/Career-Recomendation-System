@@ -20,12 +20,13 @@ function App() {
     <div className="App">
       <h1>Chatbot</h1>
       <input
+        className='inputTextArea'
         type="text"
         placeholder="Ask a question..."
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
       />
-      <button onClick={askQuestion}>Ask</button>
+      <button className='chatbtn' onClick={askQuestion}>Ask</button>
       {answer && (
         <div className="response">
           <strong>Response:</strong>

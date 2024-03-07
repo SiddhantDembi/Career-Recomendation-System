@@ -10,7 +10,7 @@ aside {
     border-top-right-radius: 10px;
     box-shadow: 0 0 5px -1px black;
     overflow-y: scroll;
-    margin-top: 54px;
+    /* margin-top: 54px; */
   }
   
   aside::-webkit-scrollbar {
@@ -31,7 +31,7 @@ aside {
     width: 100%;
     margin: 5px auto;
   }
-  
+
   .sidebar-elements .btn-click {
     border-radius: 10px;
     width: 100%;

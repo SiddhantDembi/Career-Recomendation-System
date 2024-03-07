@@ -1,12 +1,44 @@
-h2 .job{
-    margin-top: 160px;
-    margin-left: 280px;
-    padding-bottom: 1000px;
+.job{
+    margin-bottom: 30px;
+    margin-top: 90px;
+    margin-left: 350px;
 }
 
-h1 .job{
+.jobHeading{
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+
+
+.dataOfJob{
     margin-bottom: 30px;
     margin-top: 90px;
     margin-left: 170px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+
+  .field {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+.jobsdata{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #faebd7;
+    margin: 10px;
+    border-radius: 17px;
+}
+
+.jobroles{
+    font-weight: bold;
+}

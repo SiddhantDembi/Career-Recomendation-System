@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
+import Sidebar from './pages/sidebar'
 import Register from "./pages/Register";
 import { useSelector } from "react-redux";
 import Spinner from "./components/Spinner";
@@ -28,6 +29,7 @@ import Footer from './pages/Footer'
 import Chatbot from './pages/Chatbot'
 import JobList from './pages/JobList'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -41,13 +43,13 @@ function App() {
             <Route
               path="/"
               element={
-                <><Header /><DashboardTemplate /></>
+                <><Sidebar/><DashboardTemplate /></>
               }
               />
             <Route
               path="/chatbot"
               element={
-                <><Header /><Chatbot/><DashboardTemplate /></>
+                <><Chatbot/><Sidebar/></>
               }
               />
             <Route
@@ -73,51 +75,51 @@ function App() {
             <Route
               path="/application"
               element={
-                <><Header /><Application /><DashboardTemplate /></>
+                <><Application /><Sidebar/></>
                 
               }
               />
             <Route
               path="/resources"
               element={
-                <><Header /><Resources /><DashboardTemplate /></>
+                <><Resources /><Sidebar/></>
                 
               }
               />
             <Route
               path="/diff"
               element={
-                <><Header /><Difficulties /><DashboardTemplate /></>
+                <><Difficulties /><Sidebar/></>
               }
               />
             <Route
               path="/address"
               element={
-                <><Header /><Address /><DashboardTemplate /></>
+                <><Address /><Sidebar/></>
               }
               />
             <Route
               path="/about"
               element={
-                <><Header /><About/><Footer/></>
+                <><About/><Footer/></>
               }
               />
             <Route
               path="/home1"
               element={
-                <><Header /><Home/><About/><Contact/><Footer/></>
+                <><Home/><About/><Contact/><Footer/></>
               }
               />
             <Route
               path="/contact"
               element={
-                <><Header /><Contact/><Footer/></>
+                <><Contact/><Footer/></>
               }
               />
             <Route
               path="/joblist"
               element={
-                <><Header /><JobList/><DashboardTemplate /></>
+                <><JobList/><Sidebar/></>
               }
               />
           </Routes>

@@ -32,20 +32,20 @@ export default function Header2() {
     <>
     <header>
       <a onClick={dashboard}>Career Booster</a>
-      <form id="header-form">
-        <input type="text" placeholder="Search" />
-        <button type="submit">
+      {/* <form id="header-form"> */}
+        {/* <input type="text" placeholder="Search" /> */}
+        {/* <button type="submit">
           <img id="search-icon" src={searchIcon} />
-        </button>
-      </form>
+        </button> */}
+      {/* </form> */}
       <ul>
         <li><a href="/home1">Home</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/contact">Contact Us</a></li>
       </ul>
-      <button className="btn" onClick={login}>
+      {/* <button className="btn" onClick={login}>
         {log?"Login/Signup":"Logout"}
-      </button>
+      </button> */}
       {/* <div id="user-util">
         <span>
           <img src={bellIcon} />

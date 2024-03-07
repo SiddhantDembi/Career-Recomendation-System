@@ -20,6 +20,7 @@ import dashboardIcon from "../assets/dashboardIcon.svg";
 import subMenuIcon from "../assets/subMenuIcon.svg";
 // import helpIcon from "../assets/helpIcon.svg";
 import "../DashboardTemplate.css";
+import Sidebar from "./sidebar";
 import Application from "./Application";
 // import { Route } from "react-router-dom";
 // import Apply from "./jobs";
@@ -32,7 +33,7 @@ import dashboardImg2 from "../images/img2.png"
 export default function DashboardTemplate() {
   return (
     <>
-      <Header />
+      
       {/* <img src={dashboardImg} className="dashboard-img" /> */}
       <Sidebar />
       <Dashboard />
@@ -40,116 +41,23 @@ export default function DashboardTemplate() {
   );
 }
 
-function Sidebar() {
-  const [isSBVisible, setIsSBVisible] = useState([]);
-  const sidebarClick = (key) => {
-    // setIsSBVisible((prevISVisible) => {
-    //   let visibleAarry = [...prevISVisible];
-    //   visibleAarry[key] = !prevISVisible[key];
-    //   return visibleAarry;
-    // });
-    {sidebarData.map((data)=>{
-      if (key === data.id) {
-        return (
-          <>
-            <Application />
-          </>
-        )
-      }
-    })}
-  };
-  const sidebarData = [
-    {
-      id:1,
-      href:"/",
-      text: "Dashboard",
-      image: dashboardIcon,
-      sub_text: [],
-    },
-    {
-      id:2,
-      href:"/application",
-      text: "Personal Details",
-      image: academic_managementIcon,
-      sub_text: [],
-    },
-    {
-      id:3,
-      href:"/address",
-      text: "Address",
-      image: academic_managementIcon,
-      sub_text: [],
-    },
-    {
-      id:4,
-      href:"/diff",
-      text: "Assesment",
-      image: academic_managementIcon,
-      sub_text: [],
-    },
-    {
-      id:5,
-      href:"/chatbot",
-      text: "Chatbot",
-      image: academic_managementIcon,
-      sub_text: [],
-    },
-    {
-      id:6,
-      href:"/resources",
-      text: "Resources",
-      image: academic_managementIcon,
-      sub_text: [],
-    },
-    {
-      id:7,
-      href:"/joblist",
-      text: "Joblist",
-      image: academic_managementIcon,
-      sub_text: [],
-    },
-  ];
-  return (
-    <aside>
-      {sidebarData.map((data) => {
-        return (
-          <div className="sidebar-elements" key={data.id}>
-            <button className="btn-click" onClick={() => sidebarClick(data.id)}>
-              <img src={data.image} />
-              <a href={data.href}>{data.text}</a>
-            </button>
-            {data.sub_text.map((data_inside, index_inside) => {
-              return (
-                <div
-                  className={isSBVisible[index] ? "open-sub-bar" : "closed"}
-                  key={[index, index_inside]}
-                >
-                  <img src={subMenuIcon} />
-                  {data_inside}
-                </div>
-              );
-            })}
-          </div>
-        );
-      })}
-    </aside>
-  );
-}
+
 
 function Dashboard() {
   return (
     <>
-      <div className="middle-dash">
+      {/* <div className="middle-dash">
       <img src={dashboardImg1} alt="" />
       <p id="welcome-text">
       <strong>Your Path to Success: Career Recommendations Done Right</strong>
       </p>
 
-      {/* <DataChart /> */}
-    </div>
-    <div className="bottom-dash">
+      <DataChart />
+    </div> */}
+    {/* <div className="bottom-dash">
       <img src={dashboardImg2} alt="" />
-    </div>
+    </div> */}
+    <h1>Career Recomendation</h1>
     </>
     
   );
