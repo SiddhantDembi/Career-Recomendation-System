@@ -4,22 +4,22 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 # from flask_pymongo import PyMongo
 from dotenv import load_dotenv, find_dotenv
-from langchain.llms import Cohere
+# from langchain.llms import Cohere
 
 app = Flask(__name__)
 load_dotenv(find_dotenv())
 # app.config["MONGO_URI"] = os.environ["MONGO_URI"]
-llm = Cohere(cohere_api_key=os.environ["COHERE_API_KEY"], temperature=0.5)
+# llm = Cohere(cohere_api_key=os.environ["COHERE_API_KEY"], temperature=0.5)
 CORS(app)
 # db = PyMongo(app).db
 
-@app.route("/ask", methods=["POST"])
-def ask_question():
-    data = request.get_json()
-    print(data)
-    question = data.get("question", "")
-    response = llm.predict(question)
-    return jsonify({"answer": response})
+# @app.route("/ask", methods=["POST"])
+# def ask_question():
+#     data = request.get_json()
+#     print(data)
+#     question = data.get("question", "")
+#     response = llm.predict(question)
+#     return jsonify({"answer": response})
 
 @app.route("/diff", methods=["POST"])
 def dif():
