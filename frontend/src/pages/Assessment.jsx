@@ -57,7 +57,7 @@ export default function Difficulties() {
         const data1 = JSON.stringify(res.data);
         localStorage.setItem("data", data1);
         // Redirect to JobList page
-        navigate("/joblist");
+        navigate("/result");
       })
       .catch((err) => {
         console.log(err);
