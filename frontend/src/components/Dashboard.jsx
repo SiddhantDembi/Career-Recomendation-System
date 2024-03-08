@@ -1,5 +1,5 @@
-import "../styles/Sidebar.css";
-import Sidebar from "./sidebar";
+import "../styles/Dashboard.css";
+import Sidebar from "./Sidebar";
 
 export default function DashboardTemplate() {
   return (
@@ -10,6 +10,7 @@ export default function DashboardTemplate() {
     </>
   );
 }
+
 function Dashboard() {
   return (
     <>

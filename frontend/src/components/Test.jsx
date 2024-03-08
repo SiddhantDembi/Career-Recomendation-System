@@ -40,7 +40,6 @@ export default function Difficulties() {
       ans10: document.getElementById("ans10").value,
     };
 
-    // Check if all values are integers between 1 and 5
     const isValid = Object.values(formData).every((value) => {
       const intValue = parseInt(value);
       return !isNaN(intValue) && intValue >= 1 && intValue <= 5;
@@ -56,7 +55,7 @@ export default function Difficulties() {
       .then((res) => {
         const data1 = JSON.stringify(res.data);
         localStorage.setItem("data", data1);
-        // Redirect to JobList page
+        
         navigate("/result");
       })
       .catch((err) => {

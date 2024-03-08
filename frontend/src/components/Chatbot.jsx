@@ -9,14 +9,14 @@ function App() {
 
   const askQuestion = async () => {
     try {
-      setLoading(true); // Set loading to true when making the request
+      setLoading(true); 
       console.log(question)
       const res = await axios.post('http://localhost:5000/chatbot', { question });
       setAnswer(res.data.answer);
     } catch (error) {
       console.error('Error:', error);
     } finally {
-      setLoading(false); // Set loading back to false when the request is finished
+      setLoading(false); 
     }
   };
 
@@ -31,7 +31,7 @@ function App() {
         onChange={(e) => setQuestion(e.target.value)}
       />
       <button className='chatbtn' onClick={askQuestion}>Ask</button>
-      {loading && <p>Loading...</p>} {/* Display loading message if loading is true */}
+      {loading && <p>Loading...</p>} 
       {answer && (
         <div className="response">
           <strong>Response:</strong>

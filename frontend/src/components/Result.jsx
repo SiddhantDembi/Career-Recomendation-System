@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; // You can also use 'fetch' if preferred
 import "../styles/Result.css"
 import { useNavigate } from "react-router-dom";
 
@@ -10,20 +9,16 @@ function DisplayListFromBackend() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Retrieve the dictionary from local storage
     const storedDictionary = localStorage.getItem('data');
     if (storedDictionary) {
       const dictionary = JSON.parse(storedDictionary);
-      // Check if "arr" key exists and contains an array
       if (dictionary && dictionary.arr && Array.isArray(dictionary.arr)) {
-        // Set the job roles state with the values of "arr"
         setJobRoles(dictionary.arr);
       }
     }
   }, []);
 
   const retake = () => {
-    // Redirect to the assessment page for retaking the assessment
     navigate("/test");
   }
 

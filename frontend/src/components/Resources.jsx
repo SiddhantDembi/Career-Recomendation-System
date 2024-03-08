@@ -86,7 +86,7 @@ export default (ResourcePage) => {
             </div>
         </div>
     </section>
-            {/* <h1>Resource page</h1> */}
+            
             </div> 
         </>
     )

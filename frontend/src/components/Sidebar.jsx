@@ -3,7 +3,6 @@ import academic_managementIcon from "../assets/academic_managementIcon.svg";
 import dashboardIcon from "../assets/dashboardIcon.svg";
 import "../styles/Sidebar.css";
 
-
 function Sidebar() {
 const [isSBVisible, setIsSBVisible] = useState([]);
 

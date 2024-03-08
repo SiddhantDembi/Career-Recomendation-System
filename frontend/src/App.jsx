@@ -1,19 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from './pages/sidebar'
-import DashboardTemplate from "./pages/Dashboard";
-import Difficulties from "./pages/Test";
-import Resources from "./pages/Resources";
-import Chatbot from './pages/Chatbot'
-import JobList from './pages/Result'
+import Sidebar from './components/Sidebar'
+import DashboardTemplate from "./components/Dashboard";
+import Difficulties from "./components/Test";
+import Resources from "./components/Resources";
+import Chatbot from './components/Chatbot'
+import JobList from './components/Result'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
       <BrowserRouter>
         { (
           <Routes>
