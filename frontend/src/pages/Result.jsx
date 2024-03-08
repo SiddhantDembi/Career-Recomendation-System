@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // You can also use 'fetch' if preferred
-import "../styles/joblist.css"
+import "../styles/Result.css"
 import { useNavigate } from "react-router-dom";
 
 function DisplayListFromBackend() {

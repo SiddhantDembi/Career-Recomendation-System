@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../styles/diff.css";
-// import { questions } from "../Assesment_Questions/data";
+import "../styles/Assessment.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +7,6 @@ export default function Difficulties() {
   const [var1, setVar1] = useState({});
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
 
   const questions = [
     {id: 1,"idx":"ans1", "name":"ans1", "question":"How interested are you in solving complex mathematical problems?",},

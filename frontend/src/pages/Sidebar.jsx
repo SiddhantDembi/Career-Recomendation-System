@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import academic_managementIcon from "../assets/academic_managementIcon.svg";
 import dashboardIcon from "../assets/dashboardIcon.svg";
-import "../styles/DashboardTemplate.css";
+import "../styles/Sidebar.css";
 
 
 function Sidebar() {

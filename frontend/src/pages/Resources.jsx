@@ -1,10 +1,10 @@
-import '../styles/Resource.css'
+import '../styles/Resources.css'
 
 export default (ResourcePage) => {
     return(
         <>
-           <div className="rsrc">
-           <section id="services-container">
+        <div className="rsrc">
+        <section id="services-container">
         <h1 class="h-primary center">
             Resources
         </h1>

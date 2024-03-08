@@ -2,11 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from './pages/sidebar'
-import DashboardTemplate from "./pages/DashboardTemplate";
-import Difficulties from "./pages/Difficulties";
-import Resources from "./pages/ResourcePage";
+import DashboardTemplate from "./pages/Dashboard";
+import Difficulties from "./pages/Assessment";
+import Resources from "./pages/Resources";
 import Chatbot from './pages/Chatbot'
-import JobList from './pages/JobList'
+import JobList from './pages/Result'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -46,7 +46,7 @@ function App() {
               />
             
             <Route
-              path="/joblist"
+              path="/result"
               element={
                 <><JobList/><Sidebar/></>
               }

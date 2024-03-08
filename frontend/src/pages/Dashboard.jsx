@@ -1,4 +1,4 @@
-import "../styles/DashboardTemplate.css";
+import "../styles/Sidebar.css";
 import Sidebar from "./sidebar";
 
 export default function DashboardTemplate() {
@@ -10,9 +10,6 @@ export default function DashboardTemplate() {
     </>
   );
 }
-
-
-
 function Dashboard() {
   return (
     <>
