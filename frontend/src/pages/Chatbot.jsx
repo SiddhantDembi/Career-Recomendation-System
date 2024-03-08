@@ -11,7 +11,7 @@ function App() {
     try {
       setLoading(true); // Set loading to true when making the request
       console.log(question)
-      const res = await axios.post('http://localhost:5000/chatbot', { question });
+      const res = await axios.post('http://localhost:5000/ask', { question });
       setAnswer(res.data.answer);
     } catch (error) {
       console.error('Error:', error);

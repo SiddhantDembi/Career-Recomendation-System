@@ -416,7 +416,6 @@ def provideJobRecommendation(userKnowledge):
     suggest = []
 
     user_skill.sort()
-    print(user_skill)
     for job in jobs:
         name = job["name"]
         job_skills = job["skills"]
