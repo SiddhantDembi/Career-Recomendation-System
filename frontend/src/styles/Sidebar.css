@@ -156,47 +156,4 @@ aside {
     border-radius: 20px;
     height: 380px;
 }
-  
-  /* #chart-container {
-    padding: 30px;
-    width: 100%;
-    height: 350px;
-    box-shadow: 0 0 5px -1px black;
-    border-radius: 20px;
-  } */
-  
-  /* .right-dash {
-    width: 500px;
-    margin: 20px 0 0 40px;
-  } */
-  
-  /* .actual-calendar {
-    padding: 30px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 5px;
-    box-shadow: 0 0 5px -1px black;
-    margin: 80px 30px 0 0;
-  }
-  
-  .actual-calendar div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .actual-calendar div div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-  }
-  
-  .today {
-    border-radius: 50%;
-    background-color: rgb(59, 59, 59);
-    color: white;
-  } */
-  
+

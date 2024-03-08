@@ -18,7 +18,7 @@ const sidebarData = [
     {
     id: 2,
     href: "/test",
-    text: "Assessment",
+    text: "Test",
     image: academic_managementIcon,
     sub_text: [],
     },

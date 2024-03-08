@@ -66,7 +66,7 @@ export default function Difficulties() {
   return (
     <>
       <form onSubmit={Handleclick} id="form-diff">
-        <h1 className="title2">Assessment</h1>
+        <h1 className="title2">Test</h1>
         {questions.map(({ id, question, idx, name }) => {
           return (
             <div className="form_control" key={id}>
@@ -83,7 +83,7 @@ export default function Difficulties() {
             </div>
           );
         })}
-        <button className="btn btn-primary" id="b1" type="submit">
+        <button className="chatbtn" id="b1" type="submit">
           Submit
         </button>
         {error && <p style={{marginTop: "20px"}} className="error-message">{error}</p>}
