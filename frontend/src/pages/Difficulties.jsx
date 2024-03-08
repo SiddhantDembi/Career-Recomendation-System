@@ -40,7 +40,7 @@ export default function Difficulties() {
     }
 
     axios
-      .post("http://127.0.0.1:5000/diff", formData)
+      .post("http://127.0.0.1:5000/assessment", formData)
       .then((res) => {
         const data1 = JSON.stringify(res.data);
         localStorage.setItem("data", data1);

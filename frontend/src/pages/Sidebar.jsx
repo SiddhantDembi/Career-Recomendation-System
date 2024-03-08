@@ -63,7 +63,7 @@ const sidebarData = [
     
     {
     id: 2,
-    href: "/diff",
+    href: "/assessment",
     text: "Assessment",
     image: academic_managementIcon,
     sub_text: [],

@@ -87,7 +87,7 @@ function App() {
               }
               />
             <Route
-              path="/diff"
+              path="/assessment"
               element={
                 <><Difficulties /><Sidebar/></>
               }

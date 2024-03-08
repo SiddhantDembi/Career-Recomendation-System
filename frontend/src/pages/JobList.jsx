@@ -24,7 +24,7 @@ function DisplayListFromBackend() {
 
   const retake = () => {
     // Redirect to the assessment page for retaking the assessment
-    navigate("/diff");
+    navigate("/assessment");
   }
 
   const popular = () => {
