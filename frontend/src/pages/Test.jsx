@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Assessment.css";
+import "../styles/Test.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -52,7 +52,7 @@ export default function Difficulties() {
     }
 
     axios
-      .post("http://127.0.0.1:5000/assessment", formData)
+      .post("http://127.0.0.1:5000/test", formData)
       .then((res) => {
         const data1 = JSON.stringify(res.data);
         localStorage.setItem("data", data1);

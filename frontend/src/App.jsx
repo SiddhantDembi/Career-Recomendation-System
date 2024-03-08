@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from './pages/sidebar'
 import DashboardTemplate from "./pages/Dashboard";
-import Difficulties from "./pages/Assessment";
+import Difficulties from "./pages/Test";
 import Resources from "./pages/Resources";
 import Chatbot from './pages/Chatbot'
 import JobList from './pages/Result'
@@ -39,7 +39,7 @@ function App() {
               }
               />
             <Route
-              path="/assessment"
+              path="/test"
               element={
                 <><Difficulties /><Sidebar/></>
               }

@@ -17,7 +17,7 @@ def ask_question():
     response = llm.predict(question)
     return jsonify({"answer": response})
 
-@app.route("/assessment", methods=["POST"])
+@app.route("/test", methods=["POST"])
 def dif():
     response = request.get_json()
     job_recommendations = provideJobRecommendation(response)
