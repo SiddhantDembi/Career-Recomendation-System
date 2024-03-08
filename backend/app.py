@@ -10,7 +10,7 @@ load_dotenv(find_dotenv())
 llm = Cohere(cohere_api_key=os.environ["COHERE_API_KEY"], temperature=1)
 CORS(app)
 
-@app.route("/ask", methods=["POST"])
+@app.route("/chatbot", methods=["POST"])
 def ask_question():
     data = request.get_json()
     question = data.get("question", "")
