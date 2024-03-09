@@ -140,7 +140,7 @@ export default function Difficulties() {
             </div>
           );
         })}
-        <button className="chatbtn" id="b1" type="submit">
+        <button style={{backgroundColor: "white"}} className="chatbtn" id="b1" type="submit">
           Submit
         </button>
         {error && (
