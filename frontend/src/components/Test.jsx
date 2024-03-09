@@ -51,7 +51,7 @@ export default function Difficulties() {
     }
 
     axios
-      .post("http://127.0.0.1:5000/test", formData)
+      .post(`${import.meta.env.BACKEND_URL}/test`, formData)
       .then((res) => {
         const data1 = JSON.stringify(res.data);
         localStorage.setItem("data", data1);
