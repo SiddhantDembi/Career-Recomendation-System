@@ -14,67 +14,67 @@ export default function Test() {
       idx: "ans1",
       name: "ans1",
       question:
-        "How interested are you in solving complex mathematical problems?",
+        "How would you rate your proficiency in marketing strategy?",
     },
     {
       id: 2,
       idx: "ans2",
       name: "ans2",
       question:
-        "How do you feel about working in a team and collaborating with others?",
+        "How skilled are you in conducting market research?",
     },
     {
       id: 3,
       idx: "ans3",
       name: "ans3",
       question:
-        "Do you enjoy creative activities like writing, painting, or playing a musical instrument?",
+        "Rate your proficiency in digital marketing.",
     },
     {
       id: 4,
       idx: "ans4",
       name: "ans4",
       question:
-        "Are you interested in understanding human behavior, motivations, and emotions?",
+        "How confident are you in your financial analysis skills?",
     },
     {
       id: 5,
       idx: "ans5",
       name: "ans5",
-      question: "How would you rate your strengths as described by others?",
+      question: "How comfortable are you with programming?",
     },
     {
       id: 6,
       idx: "ans6",
       name: "ans6",
       question:
-        "How do you typically handle challenges or setbacks in your life or work?",
+        "Rate your problem-solving abilities.",
     },
     {
       id: 7,
       idx: "ans7",
       name: "ans7",
       question:
-        "How would you rate the effectiveness of a specific accomplishment or project where you felt your skills and strengths were utilized?",
+        "How skilled are you in using Adobe Creative Suite?",
     },
     {
       id: 8,
       idx: "ans8",
       name: "ans8",
-      question: "What motivates you the most in your career choice?",
+      question: "Rate your familiarity with SQL.",
     },
     {
       id: 9,
       idx: "ans9",
       name: "ans9",
-      question: "How important is work-life balance to you?",
+      question: "How would you rate your data analysis skills?",
     },
     {
       id: 10,
       idx: "ans10",
       name: "ans10",
       question:
-        "How important is financial stability and compensation in your career choices?",
+        "How experienced are you in employee relations?",
     },
   ];
 
