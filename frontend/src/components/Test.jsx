@@ -3,7 +3,7 @@ import "../styles/Test.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function Difficulties() {
+export default function Test() {
   const [var1, setVar1] = useState({});
   const [error, setError] = useState("");
   const navigate = useNavigate();

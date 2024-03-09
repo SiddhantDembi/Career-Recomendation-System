@@ -1,8 +1,8 @@
-.job{
-    margin-bottom: 30px;
-    margin-top: 90px;
-    margin-left: 350px;
-}
+.job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 .jobHeading{
     margin-bottom: 30px;

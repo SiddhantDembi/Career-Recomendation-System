@@ -1,5 +1,4 @@
 import "../styles/Dashboard.css";
-// import Sidebar from "./Sidebar";
 
 export default function DashboardTemplate() {
   return (

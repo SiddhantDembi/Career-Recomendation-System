@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Sidebar from "./components/Sidebar";
 import DashboardTemplate from "./components/Dashboard";
-import Difficulties from "./components/Test";
+import Test from "./components/Test";
 import Resources from "./components/Resources";
 import Chatbot from "./components/Chatbot";
-import JobList from "./components/Result";
+import Result from "./components/Result";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -51,7 +50,7 @@ function App() {
               element={
                 <>
                   <Navbar />
-                  <Difficulties />
+                  <Test />
                 </>
               }
             />
@@ -61,7 +60,7 @@ function App() {
               element={
                 <>
                   <Navbar />
-                  <JobList />
+                  <Result />
                 </>
               }
             />
