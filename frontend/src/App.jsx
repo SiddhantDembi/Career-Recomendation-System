@@ -1,7 +1,6 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DashboardTemplate from "./components/Dashboard";
+import Dashboard from "./components/Dashboard";
 import Test from "./components/Test";
 import Resources from "./components/Resources";
 import Chatbot from "./components/Chatbot";
@@ -9,7 +8,6 @@ import Result from "./components/Result";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -22,7 +20,7 @@ function App() {
                 <>
                   <Navbar />
 
-                  <DashboardTemplate />
+                  <Dashboard />
                 </>
               }
             />

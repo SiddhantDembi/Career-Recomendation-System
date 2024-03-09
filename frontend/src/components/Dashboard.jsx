@@ -1,6 +1,6 @@
 import "../styles/Dashboard.css";
 
-export default function DashboardTemplate() {
+export default function Dashboard() {
   return (
     <>
       <Dashboard />
