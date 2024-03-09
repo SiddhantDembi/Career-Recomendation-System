@@ -51,7 +51,7 @@ export default function Difficulties() {
     }
 
     axios
-      .post(`${import.meta.env.BACKEND_URL}/test`, formData)
+      .post(`${import.meta.env.VITE_BACKEND_URL}/test`, formData)
       .then((res) => {
         const data1 = JSON.stringify(res.data);
         localStorage.setItem("data", data1);
@@ -62,7 +62,7 @@ export default function Difficulties() {
         console.log(err);
       });
   }
-
+console.log(`${import.meta.env.VITE_BACKEND_URL}/test`)
   return (
     <>
       <form onSubmit={Handleclick} id="form-diff">

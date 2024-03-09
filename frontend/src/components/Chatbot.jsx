@@ -12,7 +12,7 @@ function App() {
     try {
       setLoading(true); 
       console.log(question)
-      const res = await axios.post(`${import.meta.env.BACKEND_URL}/chatbot`, { question });
+      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/chatbot`, { question });
       setAnswer(res.data.answer);
     } catch (error) {
       console.error('Error:', error);
