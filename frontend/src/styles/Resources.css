@@ -1,38 +1,37 @@
-.rsrc{
-    margin: 80px 0 20px 25vw;
-}
-
-#services{
+.rsrc {
+    margin: 80px 0 20px 0;
+  }
+  
+  #services {
     margin: -13px;
     display: flex;
     flex-wrap: wrap;
-
-}
-#services .box{
+  }
+  #services .box {
     border: 2px rgb(255, 255, 255);
     margin: 2px 20px;
     border-radius: 28px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 20px;
-}
-#services .box img{
+  }
+  #services .box img {
     height: 160px;
     margin: auto;
     display: block;
-}
-#services .box p{
-    font-family: 'Bree Serif', serif;
-}
-
-iframe{
+  }
+  #services .box p {
+    font-family: "Bree Serif", serif;
+  }
+  
+  iframe {
     border-radius: 15px;
-}
-
-label{
+  }
+  
+  label {
     font-weight: bold;
     margin-bottom: 8px;
-}
-
-h1 {
+  }
+  
+  h1 {
     margin-bottom: 30px;
-}
+  }

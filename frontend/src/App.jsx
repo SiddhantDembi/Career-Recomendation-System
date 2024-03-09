@@ -1,60 +1,75 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Sidebar from './components/Sidebar'
+// import Sidebar from "./components/Sidebar";
 import DashboardTemplate from "./components/Dashboard";
 import Difficulties from "./components/Test";
 import Resources from "./components/Resources";
-import Chatbot from './components/Chatbot'
-import JobList from './components/Result'
+import Chatbot from "./components/Chatbot";
+import JobList from "./components/Result";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <BrowserRouter>
-        { (
+        {
           <Routes>
             <Route
               path="/"
               element={
-                <><Sidebar/><DashboardTemplate /></>
+                <>
+                  <Navbar />
+
+                  <DashboardTemplate />
+                </>
               }
-              />
+            />
             <Route
               path="/chatbot"
               element={
-                <><Chatbot/><Sidebar/></>
+                <>
+                  <Navbar />
+                  <Chatbot />
+                </>
               }
-              />
-            
-            
+            />
+
             <Route
               path="/resources"
               element={
-                <><Resources /><Sidebar/></>
-                
+                <>
+                  <Navbar />
+                  <Resources />
+                </>
               }
-              />
+            />
             <Route
               path="/test"
               element={
-                <><Difficulties /><Sidebar/></>
+                <>
+                  <Navbar />
+                  <Difficulties />
+                </>
               }
-              />
-            
+            />
+
             <Route
               path="/result"
               element={
-                <><JobList/><Sidebar/></>
+                <>
+                  <Navbar />
+                  <JobList />
+                </>
               }
-              />
+            />
           </Routes>
-        )}
+        }
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
