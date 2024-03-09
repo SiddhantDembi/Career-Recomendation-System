@@ -3,12 +3,12 @@ import "../styles/Dashboard.css";
 export default function Dashboard() {
   return (
     <>
-      <Dashboard />
+      <Home />
     </>
   );
 }
 
-function Dashboard() {
+function Home() {
   return (
     <>
       <div className="dashboard-container">
