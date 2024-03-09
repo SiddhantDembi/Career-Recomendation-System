@@ -3,14 +3,6 @@ import "../styles/Dashboard.css";
 export default function Dashboard() {
   return (
     <>
-      <Home />
-    </>
-  );
-}
-
-function Home() {
-  return (
-    <>
       <div className="dashboard-container">
         <div className="dash-container1">
           <h1 className="dashboard-title">Welcome to Career Wise!</h1>
