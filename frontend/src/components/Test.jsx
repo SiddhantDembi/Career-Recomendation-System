@@ -112,7 +112,7 @@ export default function Test() {
     {
       id: 1,
       name: "logical_thinking",
-      question: "Are you a logical thinking person?",
+      question: "Are you a logical thinking person? (Rate out of 10)",
       type: "dropdown",
       options: num_list,
     },
@@ -126,14 +126,14 @@ export default function Test() {
     {
       id: 3,
       name: "coding_skills",
-      question: "How do you rate your coding skills?",
+      question: "How do you rate your coding skills? (Rate out of 10)",
       type: "dropdown",
       options: num_list,
     },
     {
       id: 4,
       name: "public_speaking_skills",
-      question: "How do you rate your public speaking skills/confidency?",
+      question: "How do you rate your public speaking skills/confidency? (Rate out of 10)",
       type: "dropdown",
       options: num_list,
     },
@@ -258,17 +258,21 @@ export default function Test() {
 
   function handleClick(e) {
     e.preventDefault();
+    console.log("Form Values:", formValues); // Add this line to check formValues
     axios
-      .post(`${import.meta.env.VITE_BACKEND_URL}/test`, formValues)
-      .then((res) => {
-        const data1 = JSON.stringify(res.data);
-        localStorage.setItem("data", data1);
-        navigate("/result");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  .post(`${import.meta.env.VITE_BACKEND_URL}/test`, formValues)
+  .then((res) => {
+    const data1 = JSON.stringify(res.data);
+    localStorage.setItem("data", data1);
+    console.log("Response:", res.data); // Check response
+    navigate("/result");
+  })
+  .catch((err) => {
+    console.log("Error:", err); // Catch and log errors
+  });
+
   }
+  
 
   return (
     <>
