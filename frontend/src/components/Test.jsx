@@ -3,331 +3,151 @@ import "../styles/Test.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const cert_list = [
-  "app development",
-  "distro making",
-  "full stack",
-  "hadoop",
-  "information security",
-  "machine learning",
-  "python",
-  "r programming",
-  "shell programming",
-];
-
-const workshop_list = [
-  "cloud computing",
-  "data science",
-  "database security",
-  "game development",
-  "hacking",
-  "system designing",
-  "testing",
-  "web technologies",
-];
-
-const skill = ["excellent", "medium", "poor"];
-
-const subject_list = [
-  "cloud computing",
-  "Computer Architecture",
-  "data engineering",
-  "hacking",
-  "IOT",
-  "Management",
-  "networks",
-  "parallel computing",
-  "programming",
-  "Software Engineering",
-];
-
-const career_list = [
-  "Business process analyst",
-  "cloud computing",
-  "developer",
-  "security",
-  "system developer",
-  "testing",
-];
-
-const company_list = [
-  "BPA",
-  "Cloud Services",
-  "Finance",
-  "Product based",
-  "product development",
-  "SAaS services",
-  "Sales and Marketing",
-  "Service Based",
-  "Testing and Maintainance Services",
-  "Web Services",
-];
-
-const book_list = [
-  "Action and Adventure",
-  "Anthology",
-  "Art",
-  "Autobiographies",
-  "Biographies",
-  "Childrens",
-  "Comics",
-  "Cookbooks",
-  "Diaries",
-  "Dictionaries",
-  "Drama",
-  "Encyclopedias",
-  "Fantasy",
-  "Guide",
-  "Health",
-  "History",
-  "Horror",
-  "Journals",
-  "Math",
-  "Mystery",
-  "Poetry",
-  "Prayer books",
-  "Religion-Spirituality",
-  "Romance",
-  "Satire",
-  "Science",
-  "Science fiction",
-  "Self help",
-  "Series",
-  "Travel",
-  "Trilogy",
-];
-
-const num_list = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-const hack = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
-const Boolean = ["Yes", "No"];
-const Choice_list = ["Management", "Technical"];
-const worker_list = ["hard worker", "smart worker"];
-
 export default function Test() {
-  const [formValues, setFormValues] = useState({});
+  const [var1, setVar1] = useState({});
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const questions = [
     {
       id: 1,
-      name: "logical_thinking",
-      question: "Are you a logical thinking person? (Rate out of 10)",
-      type: "dropdown",
-      options: num_list,
+      idx: "ans1",
+      name: "ans1",
+      question:
+        "How would you rate your proficiency in marketing strategy?",
     },
     {
       id: 2,
-      name: "hackathon_attend",
-      question: "Do you attend any Hackathons?",
-      type: "dropdown",
-      options: hack,
+      idx: "ans2",
+      name: "ans2",
+      question:
+        "How skilled are you in conducting market research?",
     },
     {
       id: 3,
-      name: "coding_skills",
-      question: "How do you rate your coding skills? (Rate out of 10)",
-      type: "dropdown",
-      options: num_list,
+      idx: "ans3",
+      name: "ans3",
+      question:
+        "Rate your proficiency in digital marketing.",
     },
     {
       id: 4,
-      name: "public_speaking_skills",
-      question: "How do you rate your public speaking skills/confidency? (Rate out of 10)",
-      type: "dropdown",
-      options: num_list,
+      idx: "ans4",
+      name: "ans4",
+      question:
+        "How confident are you in your financial analysis skills?",
     },
     {
       id: 5,
-      name: "self_learning",
-      question: "Are you a self-learning person?",
-      type: "dropdown",
-      options: Boolean,
+      idx: "ans5",
+      name: "ans5",
+      question: "How comfortable are you with programming?",
     },
     {
       id: 6,
-      name: "extra_course",
-      question: "Do you take extra courses in uni (other than IT)?",
-      type: "dropdown",
-      options: Boolean,
+      idx: "ans6",
+      name: "ans6",
+      question:
+        "Rate your problem-solving abilities.",
     },
     {
       id: 7,
-      name: "certificate_code",
-      question: "Select a certificate you took!",
-      type: "dropdown",
-      options: cert_list,
+      idx: "ans7",
+      name: "ans7",
+      question:
+        "How skilled are you in using Adobe Creative Suite?",
     },
     {
       id: 8,
-      name: "workshop_code",
-      question: "Select a workshop you attended!",
-      type: "dropdown",
-      options: workshop_list,
+      idx: "ans8",
+      name: "ans8",
+      question: "Rate your familiarity with SQL.",
     },
     {
       id: 9,
-      name: "read_writing_skill",
-      question: "Select your read and writing skill",
-      type: "dropdown",
-      options: skill,
+      idx: "ans9",
+      name: "ans9",
+      question: "How would you rate your data analysis skills?",
     },
     {
       id: 10,
-      name: "memory_capability",
-      question: "Is your memory capability good?",
-      type: "dropdown",
-      options: skill,
-    },
-    {
-      id: 11,
-      name: "subject_interest",
-      question: "What subject you are interested in?",
-      type: "dropdown",
-      options: subject_list,
-    },
-    {
-      id: 12,
-      name: "career_interest",
-      question: "Which IT-Career do you have interests in?",
-      type: "dropdown",
-      options: career_list,
-    },
-    {
-      id: 13,
-      name: "company_intend",
-      question: "Do you have any interested company that you intend to settle in?",
-      type: "dropdown",
-      options: company_list,
-    },
-    {
-      id: 14,
-      name: "senior_elder_advise",
-      question: "Do you ever seek any advices from senior or elders?",
-      type: "dropdown",
-      options: Boolean,
-    },
-    {
-      id: 15,
-      name: "book_interest",
-      question: "Select your interested genre of book!",
-      type: "dropdown",
-      options: book_list,
-    },
-    {
-      id: 16,
-      name: "introvert_extro",
-      question: "Are you an Introvert?| No - extrovert",
-      type: "dropdown",
-      options: Boolean,
-    },
-    {
-      id: 17,
-      name: "team_player",
-      question: "Ever worked in a team?",
-      type: "dropdown",
-      options: Boolean,
-    },
-    {
-      id: 18,
-      name: "management_technical",
-      question: "Which area do you prefer: Management or Technical?",
-      type: "dropdown",
-      options: Choice_list,
-    },
-    {
-      id: 19,
-      name: "smart_hardworker",
-      question: "Are you a Smart worker or Hard worker?",
-      type: "dropdown",
-      options: worker_list,
+      idx: "ans10",
+      name: "ans10",
+      question:
+        "How experienced are you in employee relations?",
     },
   ];
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    setVar1({ ...var1, [e.target.name]: e.target.value });
   };
 
-  const handleSliderChange = (e, name) => {
-    setFormValues({ ...formValues, [name]: e.target.value });
-  };
-
-  const handleRadioChange = (name, value) => {
-    setFormValues({ ...formValues, [name]: value });
-  };
-
-  function handleClick(e) {
+  function Handleclick(e) {
     e.preventDefault();
-    console.log("Form Values:", formValues); // Add this line to check formValues
+    const formData = {
+      ans1: document.getElementById("ans1").value,
+      ans2: document.getElementById("ans2").value,
+      ans3: document.getElementById("ans3").value,
+      ans4: document.getElementById("ans4").value,
+      ans5: document.getElementById("ans5").value,
+      ans6: document.getElementById("ans6").value,
+      ans7: document.getElementById("ans7").value,
+      ans8: document.getElementById("ans8").value,
+      ans9: document.getElementById("ans9").value,
+      ans10: document.getElementById("ans10").value,
+    };
+
+    const isValid = Object.values(formData).every((value) => {
+      const intValue = parseInt(value);
+      return !isNaN(intValue) && intValue >= 1 && intValue <= 5;
+    });
+
+    if (!isValid) {
+      setError("All input values must be integers between 1 and 5.");
+      return;
+    }
+
     axios
-  .post(`${import.meta.env.VITE_BACKEND_URL}/test`, formValues)
-  .then((res) => {
-    const data1 = JSON.stringify(res.data);
-    localStorage.setItem("data", data1);
-    console.log("Response:", res.data); // Check response
-    navigate("/result");
-  })
-  .catch((err) => {
-    console.log("Error:", err); // Catch and log errors
-  });
+      .post(`${import.meta.env.VITE_BACKEND_URL}/test`, formData)
+      .then((res) => {
+        const data1 = JSON.stringify(res.data);
+        localStorage.setItem("data", data1);
 
+        navigate("/result");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
-  
-
+  console.log(`${import.meta.env.VITE_BACKEND_URL}/test`);
   return (
     <>
-      <form onSubmit={handleClick} id="form-diff">
+      <form onSubmit={Handleclick} id="form-diff">
         <h1 className="title2">Test</h1>
-        {questions.map(({ id, question, name, type, options, min, max, step, default: defaultValue, info }) => (
-          <div className="form_control" key={id}>
-            <label className="question">
-              {id}. {question} {info && <span>({info})</span>}
-            </label>
-            {type === "slider" && (
-              <input
-                type="range"
-                value={formValues[name] || defaultValue}
-                id={name}
-                name={name}
-                min={min}
-                max={max}
-                step={step}
-                onChange={(e) => handleSliderChange(e, name)}
-              />
-            )}
-            {type === "radio" && options.map((option) => (
-              <label key={option}>
-                <input
-                  type="radio"
-                  name={name}
-                  value={option}
-                  checked={formValues[name] === option}
-                  onChange={() => handleRadioChange(name, option)}
-                />
-                {option}
+        {questions.map(({ id, question, idx, name }) => {
+          return (
+            <div className="form_control" key={id}>
+              <label className="question">
+                {id}. {question} (Rate from 1-5)
               </label>
-            ))}
-            {type === "dropdown" && (
-              <select
+              <input
+                type="text"
+                value={var1[name] || ""}
+                id={idx}
                 name={name}
-                value={formValues[name] || ""}
-                id={name}
                 onChange={handleChange}
-              >
-                <option value="">Select an option</option>
-                {options.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            )}
-          </div>
-        ))}
-        <button style={{ backgroundColor: "white", color: "black" }} className="chatbtn" id="b1" type="submit">
+              ></input>
+            </div>
+          );
+        })}
+        <button style={{backgroundColor: "white",color:"black"}} className="chatbtn" id="b1" type="submit">
           Submit
         </button>
-        {error && <div>{error}</div>}
+        {error && (
+          <p style={{ marginTop: "20px" }} className="error-message">
+            {error}
+          </p>
+        )}
       </form>
     </>
   );
