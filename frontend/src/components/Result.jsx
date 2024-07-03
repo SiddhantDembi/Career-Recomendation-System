@@ -12,7 +12,8 @@ function DisplayListFromBackend() {
     const storedDictionary = localStorage.getItem('data');
     if (storedDictionary) {
       const dictionary = JSON.parse(storedDictionary);
-      if (dictionary && dictionary.arr && Array.isArray(dictionary.arr)) {
+      if (dictionary && dictionary.arr && Array.isArray(dictionary.arr) && dictionary.arr.length > 0){
+        dictionary.arr.sort((a, b) => b.score - a.score);
         setJobRoles(dictionary.arr);
       }
     }
@@ -31,7 +32,8 @@ function DisplayListFromBackend() {
       <h1 className='jobHeading'>Recommended job roles</h1>
       {jobRoles.map((jobRole, index) => (
         <div className='jobsdata' key={index}>
-          <p className='jobroles'>{jobRole}</p>
+          <p className='jobroles'>{jobRole.name}</p>
+          {/* <p className='jobroles'>{jobRole.score}</p> */}
         </div>
       ))}
       <div style={{display:'flex',justifyContent:"center",gap:"1rem"}}>
