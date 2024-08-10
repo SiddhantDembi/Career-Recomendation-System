@@ -7,13 +7,10 @@ export default function Dashboard() {
         <div className="dash-container1">
           <h1 className="dashboard-title">Welcome to Career Wise!</h1>
           <p className="dashboard-desc">
-            Unlock Your Career Potential with Personalized Recommendations!{" "}
+          Are you feeling uncertain about your career choices?
             <br />
-            Discover Your Path to Success! <br /> Are you feeling uncertain
-            about your career choices? <br /> Let us guide you towards a
-            fulfilling and rewarding career journey. <br /> Our personalized
-            recommendations are designed to match your skills, interests, and
-            aspirations.
+            Unlock Your Career Potential with Personalized Recommendations!
+          
           </p>
         </div>
         <div className="dash-container2">
