@@ -11,7 +11,7 @@ export default function Dashboard() {
             <br />
             Discover Your Path to Success! <br /> Are you feeling uncertain
             about your career choices? <br /> Let us guide you towards a
-            fulfilling and rewarding career journey. Our personalized
+            fulfilling and rewarding career journey. <br /> Our personalized
             recommendations are designed to match your skills, interests, and
             aspirations.
           </p>
@@ -22,11 +22,7 @@ export default function Dashboard() {
           </div>
           <div className="dash-container2-div2">
             <ul>
-              <li>
-                <u>Profile Creation:</u> <br />
-                Begin by creating your personal profile. Share your skills,
-                interests, and career goals to help us understand you better.
-              </li>
+              
               <li>
                 <u>Assessment:</u>
                 <br />
@@ -40,6 +36,9 @@ export default function Dashboard() {
                 profile and assessment results.
               </li>
             </ul>
+          </div>
+          <div>
+            <a href="/test" className="test-btn">Take Test</a>
           </div>
         </div>
       </div>

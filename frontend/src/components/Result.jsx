@@ -23,26 +23,23 @@ function DisplayListFromBackend() {
     navigate("/test");
   }
 
-  const popular = () => {
-    navigate("/resources");
-  }
+
 
   return (
     <div className='job'>
       <h1 className='jobHeading'>Recommended job roles</h1>
-      {jobRoles.map((jobRole, index) => (
+      {jobRoles.slice(0, 20).map((jobRole, index) => (
         <div className='jobsdata' key={index}>
           <p className='jobroles'>{jobRole.name}</p>
-          
-        </div>
-      ))}
+          <p className='jobroles'>{jobRole.score*100}%</p>
+        </div>))}
+
       <div style={{display:'flex',justifyContent:"center",gap:"1rem"}}>
-        <button style={{width:"200px"}} className='chatbtn' onClick={retake}>
+        <button className='test-btn' onClick={retake}>
           Retake Assessment
         </button>
-        <button style={{width:"200px"}} className='chatbtn' onClick={popular}>
-          Popular Careers
-        </button>
+        <a href='/' className='test-btn'>Home</a>
+        
       </div>
     </div>
   );

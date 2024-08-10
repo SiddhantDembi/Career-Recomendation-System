@@ -13,14 +13,7 @@ export default function Header2() {
         <p className="nav-title">
           <a onClick={dashboard}>Career Wise</a>
         </p>
-        <ul>
-          <li>
-            <a href="/test">Test</a>
-          </li>
-          <li>
-            <a href="/resources">Resources</a>
-          </li>
-        </ul>
+        
       </header>
     </>
   );

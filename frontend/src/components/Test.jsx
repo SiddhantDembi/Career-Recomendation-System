@@ -3,8 +3,6 @@ import "../styles/Test.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-
-
 const cert_list = [
   "app development",
   "distro making",
@@ -61,7 +59,7 @@ const company_list = [
   "SAaS services",
   "Sales and Marketing",
   "Service Based",
-  "Testing and Maintainance Services",
+  "Testing and Maintenance Services",
   "Web Services",
 ];
 
@@ -155,7 +153,7 @@ export default function Test() {
     {
       id: 4,
       name: "public_speaking_skills",
-      question: "How do you rate your public speaking skills/confidency? (Rate out of 10)",
+      question: "How do you rate your public speaking skills/confidence? (Rate out of 10)",
       type: "dropdown",
       options: num_list,
     },
@@ -225,7 +223,7 @@ export default function Test() {
     {
       id: 14,
       name: "senior_elder_advise",
-      question: "Do you ever seek any advices from senior or elders?",
+      question: "Do you ever seek any advice from senior or elders?",
       type: "dropdown",
       options: Boolean,
     },
@@ -264,6 +262,13 @@ export default function Test() {
       type: "dropdown",
       options: worker_list,
     },
+    {
+      id: 20,
+      question: "Do you like working on projects with strict deadlines?",
+      name: "deadline",
+      type: "dropdown",
+      options: Boolean,
+    },
   ];
 
   const handleChange = (e) => {
@@ -280,7 +285,16 @@ export default function Test() {
 
   function handleClick(e) {
     e.preventDefault();
-    console.log("Form Values:", formValues); // Add this line to check formValues
+
+    // Check if all fields are filled
+    const isFormValid = Object.values(formValues).every(value => value !== "" && value !== null && value !== undefined);
+    
+    if (!isFormValid) {
+      setError("Please fill out all the fields.");
+      return;
+    }
+
+    // Convert "Yes"/"No" to 1/0
     Object.keys(formValues).forEach((key) => {
       if (formValues[key] === "Yes"){
         formValues[key] = 1;
@@ -289,20 +303,20 @@ export default function Test() {
         formValues[key] = 0;
       }
     });
-    axios
-  .post(`http://127.0.0.1:5000/test`, formValues)
-  .then((res) => {
-    const data1 = JSON.stringify(res.data);
 
-    localStorage.setItem("data", data1);
-    console.log("Response:", res.data); // Check response
-    navigate("/result");
-  })
-  .catch((err) => {
-    console.log("Error:", err); // Catch and log errors
-  });
+    axios
+      .post(`http://127.0.0.1:5000/test`, formValues)
+      .then((res) => {
+        const data1 = JSON.stringify(res.data);
+
+        localStorage.setItem("data", data1);
+        console.log("Response:", res.data); // Check response
+        navigate("/result");
+      })
+      .catch((err) => {
+        console.log("Error:", err); // Catch and log errors
+      });
   }
-  
 
   return (
     <>
@@ -354,10 +368,10 @@ export default function Test() {
             )}
           </div>
         ))}
-        <button style={{ backgroundColor: "white", color: "black" }} className="chatbtn" id="b1" type="submit">
+        <button className="test-btn" id="b1" type="submit">
           Submit
         </button>
-        {error && <div>{error}</div>}
+        {error && <div style={{marginTop: "10px"}}>{error}</div>}
       </form>
     </>
   );
