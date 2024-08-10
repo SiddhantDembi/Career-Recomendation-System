@@ -33,7 +33,7 @@ function DisplayListFromBackend() {
       {jobRoles.map((jobRole, index) => (
         <div className='jobsdata' key={index}>
           <p className='jobroles'>{jobRole.name}</p>
-          {/* <p className='jobroles'>{jobRole.score}</p> */}
+          
         </div>
       ))}
       <div style={{display:'flex',justifyContent:"center",gap:"1rem"}}>

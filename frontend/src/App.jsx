@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Test from "./components/Test";
 import Resources from "./components/Resources";
-import Chatbot from "./components/Chatbot";
 import Result from "./components/Result";
 import Navbar from "./components/Navbar";
 
@@ -24,16 +23,7 @@ function App() {
                 </>
               }
             />
-            <Route
-              path="/chatbot"
-              element={
-                <>
-                  <Navbar />
-                  <Chatbot />
-                </>
-              }
-            />
-
+            
             <Route
               path="/resources"
               element={

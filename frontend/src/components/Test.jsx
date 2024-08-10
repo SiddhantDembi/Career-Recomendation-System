@@ -290,7 +290,7 @@ export default function Test() {
       }
     });
     axios
-  .post(`${import.meta.env.VITE_BACKEND_URL}/test`, formValues)
+  .post(`http://127.0.0.1:5000/test`, formValues)
   .then((res) => {
     const data1 = JSON.stringify(res.data);
 
