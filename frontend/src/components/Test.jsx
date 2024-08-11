@@ -305,7 +305,7 @@ export default function Test() {
     });
 
     axios
-      .post(`http://127.0.0.1:5000/test`, formValues)
+      .post(`https://career-backend.dembi.xyz/test`, formValues)
       .then((res) => {
         const data1 = JSON.stringify(res.data);
 
